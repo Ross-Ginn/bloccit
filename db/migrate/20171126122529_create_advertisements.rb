@@ -3,8 +3,7 @@ class CreateAdvertisements < ActiveRecord::Migration[5.1]
     create_table :advertisements do |t|
       t.string :title
       t.text :copy
-      t.string :price
-      t.string :integer
+      t.integer :price
 
       t.timestamps
     end
