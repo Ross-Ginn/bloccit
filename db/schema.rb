@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116074922) do
+ActiveRecord::Schema.define(version: 20171214191159) do
 
   create_table "advertisements", force: :cascade do |t|
     t.string "title"
     t.text "copy"
-    t.string "price"
-    t.string "integer"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,6 +47,14 @@ ActiveRecord::Schema.define(version: 20171116074922) do
     t.string "title"
     t.text "body"
     t.boolean "resolved"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "topics", force: :cascade do |t|
+    t.string "name"
+    t.boolean "public", default: true
+    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
